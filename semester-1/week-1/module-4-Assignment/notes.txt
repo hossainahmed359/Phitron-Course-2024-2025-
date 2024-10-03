@@ -1,0 +1,87 @@
+#include <stdio.h>
+int main()
+{
+    printf("=== Semester One | Week One | Module Four | Assignment | Type: Contest ===\n");
+
+    /*
+    Submission:
+    Profile Link:  https://www.hackerrank.com/profile/hossainahmed359
+    Username:  @hossainahmed359
+    */
+
+    // ======= Problem One | SALAMI =======
+    /*
+    int x, y, z;
+    scanf("%d %d %d", &x, &y, &z);
+    printf("%d", x + y + z);
+    */
+
+
+    // ======= Problem Two | MULTIPLY =======
+    /*
+    long long int a, b;
+    scanf("%lld %lld", &a, &b);
+    printf("%lld\n", a * b);
+    */
+
+
+    // ======= Problem Three | KHANA PINA =======
+    /*      
+    int x, y, z;
+    scanf("%d %d %d", &x, &y, &z);
+
+    if (x + y + z >= 1000)
+    {
+        printf("Three Kacchi");
+    }
+    else if (x + y + z >= 500)
+    {
+        printf("One Large Pizza");
+    }
+    else if (x + y + z >= 250)
+    {
+        printf("Three Small Burger");
+    }
+    else if (x + y + z >= 100)
+    {
+        printf("Three Fuchka");
+    }
+    else
+    {
+        printf("Nothing");
+    } 
+    */
+
+
+   // ======= Problem Four | KHANA PINA TWO =======
+    /*     
+    int b;
+    scanf("%d", &b);
+
+    if(b%3 == 0) 
+    {
+        printf("Yes\n");
+    } else
+    {
+        printf("No\n");
+    } 
+    */
+
+
+    // ======= Problem Five | KHANA PINA THREE =======
+    /*     
+    int n;
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++)
+    {
+        if(i%3 == 0 || i%5 == 0) {
+            printf("%d Yes\n", i);
+        } else {
+            printf("%d No\n", i);
+        }
+    }
+     */
+
+    return 0;
+}
