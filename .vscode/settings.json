@@ -64,6 +64,7 @@
     "*.css.liquid": "liquid-css",
     "*.scss.liquid": "liquid-scss",
     "stdlib.h": "c",
-    "stdio.h": "c"
+    "stdio.h": "c",
+    "random": "c"
   }
 }

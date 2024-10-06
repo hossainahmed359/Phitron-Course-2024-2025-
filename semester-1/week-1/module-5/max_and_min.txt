@@ -1,0 +1,46 @@
+#include <stdio.h>
+int main()
+{
+    printf("=== Semester One | Week One | Module Five | Max And Min ===\n");
+
+
+
+    // K. Max and Min
+    /*
+    === Combined Solution ===
+    */
+    long long int a, b, c, min, max;
+    scanf("%lld %lld %lld", &a, &b, &c);
+
+    // Min
+    if (a <= b && a <= c)
+    {
+        min = a;
+    }
+    else if (b <= a && b <= c)
+    {
+        min = b;
+    }
+    else
+    {
+        min = c;
+    }
+
+    // Max
+    if (a >= b && a >= c)
+    {
+        max = a;
+    }
+    else if (b >= a && b >= c)
+    {
+        max = b;
+    }
+    else
+    {
+        max = c;
+    }
+
+    printf("%lld %lld", min, max);
+
+    return 0;
+}

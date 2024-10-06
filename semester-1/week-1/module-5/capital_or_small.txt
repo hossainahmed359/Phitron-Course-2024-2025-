@@ -1,0 +1,54 @@
+#include <stdio.h>
+int main()
+{
+    printf("=== Semester One | Week One | Module Five | Conditional Statement Recap | Capital or Small  ===\n");
+
+    // M. Capital or Small or Digit
+    /*
+    === My Solution ===
+    char ch;
+    scanf("%c", &ch);
+
+    int asciiValue = (int)ch;
+
+    if(asciiValue >= 48 && asciiValue <= 57)
+    {
+        printf("IS DIGIT\n");
+    }
+    else if(asciiValue >= 65 && asciiValue <= 90)
+    {
+        printf("ALPHA\n");
+        printf("IS CAPITAL\n");
+    }
+    else if (asciiValue >= 67 && asciiValue <= 122)
+    {
+        printf("ALPHA\n");
+        printf("IS SMALL\n");
+    }
+
+    === Phitron Solution ===
+    char ch;
+    scanf("%c", &ch);
+
+    if (ch >= '0' && ch <= '9')
+    {
+        printf("IS DIGIT\n");
+    }
+    else
+    {
+        printf("ALPHA\n");
+        if (ch >= 'A' && ch <= 'Z')
+        {
+            printf("IS CAPITAL\n");
+        }
+        else
+        {
+            printf("IS SMALL\n");
+        }
+    }
+    */
+
+
+
+    return 0;
+}
