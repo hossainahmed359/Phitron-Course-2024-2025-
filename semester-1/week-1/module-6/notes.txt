@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main()
+{
+    printf("=== Semester One | Week One | Module Six | Loop Recap and Nested Loop  ===\n");
+
+    int i = 3, count = 0;
+    while (i <= 5)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            printf("*");
+            count++;
+        }
+        i++;
+    }
+
+    printf("%d", count);
+    return 0;
+}

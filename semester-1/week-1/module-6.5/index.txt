@@ -1,0 +1,6 @@
+#include<stdio.h>
+int main () {
+    printf("=== Semester One | Week Two | Module Six . Five | Practice Day  ===");
+    return 0;
+}
+

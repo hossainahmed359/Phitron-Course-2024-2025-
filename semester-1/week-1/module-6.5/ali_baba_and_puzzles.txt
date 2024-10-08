@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main()
+{
+    // D. Ali Baba and Puzzles
+    long int a, b, c, d;
+    scanf("%ld %ld %ld %ld", &a, &b, &c, &d);
+
+    if (
+        (a + b * c == d) || (a + b - c == d) ||
+        (a * b - c == d) || (a * b + c == d) ||
+        (a - b + c == d) || (a - b * c == d)
+    )
+    {
+        printf("YES\n");
+    }
+    else
+    {
+        printf("NO\n");
+    }
+
+    return 0;
+}

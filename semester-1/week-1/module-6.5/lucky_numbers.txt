@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdbool.h>
+int main()
+{
+    // I. Lucky Numbers
+    int n, i, j;
+    scanf("%d", &n);
+
+    i = (n/10) % 10;
+    j = n % 10;
+
+
+    if (i % j == 0 || j % i == 0)
+    {
+        printf("YES");
+    }
+    else
+    {
+        printf("NO");
+    }
+
+    return 0;
+}

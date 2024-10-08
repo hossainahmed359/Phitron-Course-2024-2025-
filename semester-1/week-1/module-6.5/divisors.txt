@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main()
+{
+    // K. Divisors
+    int n, d;
+    scanf("%d", &n);
+
+    d = 1;
+
+    while (d <= n)
+    {
+        if (n % d == 0)
+        {
+            printf("%d\n", d);
+        }
+
+        d++;
+    }
+
+    return 0;
+}
