@@ -1,0 +1,6 @@
+#include<stdio.h>
+int main () {
+    printf("=== Semester One | Week One | Module Seven | Introduction to array  ===");
+    return 0;
+}
+
