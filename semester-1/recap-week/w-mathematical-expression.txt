@@ -1,0 +1,35 @@
+// W - Mathematical Expression
+#include <stdio.h>
+
+int main() {
+    int x, y, z, result;
+    char s, q;
+    
+    scanf("%d %c %d %c %d", &x, &s, &y, &q, &z);
+    
+    switch(s)
+    {
+        case '+':
+            result = x + y;
+            break;
+        case '-':
+            result = x - y;
+            break;
+        case '*':
+            result = x * y;
+            break;
+    }
+            
+    
+    if(result == z) 
+    {
+        printf("Yes\n"); 
+    }
+    else 
+    {
+        printf("%d\n", result); 
+    }
+
+    return 0;
+}
+

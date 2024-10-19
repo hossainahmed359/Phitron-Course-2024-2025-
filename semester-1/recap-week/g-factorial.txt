@@ -4,36 +4,25 @@
 #include <stdio.h>
 
 int main() {
+    int t;
     
-    int T;
-    scanf("%d", &T);
+    scanf("%d", &t);
     
-    long long int fact_list[T];
-    
-    for(int tst_inp_index = 0; tst_inp_index < T; tst_inp_index++)
+    for(int i = 1; i <= t; i++)
     {
         int n;
         scanf("%d", &n);
         
         long long int fact = 1;
         
-        for(int i = n; i >= 1; i--)
+        for(int i = 1; i <= n; i++)
         {
             fact *= i;
         }
-        
-        fact_list[tst_inp_index] = fact;
+    
+        // Output factorial
+        printf("%lld\n", fact);
     }
-    
-    
-     for(int tst_out_index = 0; tst_out_index < T; tst_out_index++)
-     {
-         printf("%lld\n", fact_list[tst_out_index]);
-         
-     }
-    
-    
-
     
     
     return 0;

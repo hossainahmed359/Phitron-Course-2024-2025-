@@ -1,0 +1,33 @@
+// T - Sort Numbers
+#include <stdio.h>
+
+int main() {
+    int x, y, z, min, mid, max;
+
+    scanf("%d %d %d", &x, &y, &z);
+
+    // Initialize min, mid, max
+    if (x <= y && x <= z) {
+        min = x;
+        mid = (y <= z) ? y : z;
+        max = (y <= z) ? z : y;
+    } 
+    else if (y <= x && y <= z) {
+        min = y;
+        mid = (x <= z) ? x : z;
+        max = (x <= z) ? z : x;
+    } 
+    else {
+        min = z;
+        mid = (x <= y) ? x : y;
+        max = (x <= y) ? y : x;
+    }
+
+    // Output sorted values
+    printf("%d\n%d\n%d\n\n", min, mid, max);
+
+    // Output original values
+    printf("%d\n%d\n%d\n", x, y, z);
+
+    return 0;
+}

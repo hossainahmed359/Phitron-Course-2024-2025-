@@ -1,27 +1,18 @@
 
-// semester-1/recap-week/sum-of-consecutive-numbers.txt
+// https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/G
 // G. Summation from 1 to N
 #include <stdio.h>
 
 int main() {
-    int n;
-    scanf("%d", &n);
-    
-    long long int sum = 0;
-    
-    // WRONG APPROACH
-    // for(int i = 1; i <= n; i++)
-    // {
-    //     sum += i;
-    // }
-    
-    // CORRECT -> ((n+1) X n )/2
-    
-    sum = (long long int)n * (n + 1) / 2;
-    
-    printf("%lld\n", sum);
+    long long int n, sum;
 
-    
+    scanf("%lld", &n);
+
+    // Method precision & formula
+    sum = (long long int)(n * (n + 1)) / 2;
+
+    // Output sum
+    printf("%lld\n", sum);
     
     return 0;
 }
