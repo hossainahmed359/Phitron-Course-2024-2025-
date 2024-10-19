@@ -1,0 +1,40 @@
+
+// https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/G
+// G. Factorial
+#include <stdio.h>
+
+int main() {
+    
+    int T;
+    scanf("%d", &T);
+    
+    long long int fact_list[T];
+    
+    for(int tst_inp_index = 0; tst_inp_index < T; tst_inp_index++)
+    {
+        int n;
+        scanf("%d", &n);
+        
+        long long int fact = 1;
+        
+        for(int i = n; i >= 1; i--)
+        {
+            fact *= i;
+        }
+        
+        fact_list[tst_inp_index] = fact;
+    }
+    
+    
+     for(int tst_out_index = 0; tst_out_index < T; tst_out_index++)
+     {
+         printf("%lld\n", fact_list[tst_out_index]);
+         
+     }
+    
+    
+
+    
+    
+    return 0;
+}

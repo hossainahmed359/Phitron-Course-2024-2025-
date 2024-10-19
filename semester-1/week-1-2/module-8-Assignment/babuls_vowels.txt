@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+        
+
+    // Babul's Vowels
+    char C;
+    scanf("%c", &C);
+
+    if(
+        C == 'a' ||
+        C == 'e' ||
+        C == 'i' ||
+        C == 'o' ||
+        C == 'u'
+    )
+    {
+        printf("Vowel\n"); 
+    }
+    else 
+    {
+        printf("Consonant\n"); 
+    }
+
+    return 0;
+}
