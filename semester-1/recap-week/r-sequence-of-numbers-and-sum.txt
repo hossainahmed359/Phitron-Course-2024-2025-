@@ -1,0 +1,31 @@
+
+// https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/R
+// R. Sequence of Numbers and Sum
+#include <stdio.h>
+
+int main() {
+    int x, y;
+    
+    while(scanf("%d %d", &x, &y) != EOF)
+    {
+        if(x <= 0 || y <= 0) break;
+        
+        int min, max, sum = 0;
+        min = x < y ? x : y;
+        max = x > y ? x : y;
+        
+        for(int i = min; i <= max; i++)
+        {
+            printf("%d ", i);
+            sum += i;
+        }
+        
+        printf("sum =%d", sum);
+        printf("\n");
+        
+    }
+    
+    
+
+    return 0;
+}

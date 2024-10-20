@@ -1,0 +1,49 @@
+
+// https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/J
+// J. Primes from 1 to n
+#include <stdio.h>
+#include <stdbool.h>
+#include <math.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    
+    for(int k = 2; k <= n; k++)
+    {
+        
+        bool flag = true;
+        
+        if(k <= 1) 
+        {
+            flag = false;
+        }
+        else if(k == 2) 
+        {
+            flag = true;
+        }
+        else if (k > 2 && k%2 == 0)
+        {
+            flag = false;
+        }
+        else 
+        {
+            for(int i = 3; i <= sqrt(k); i++) 
+            {
+                if(k%i == 0) 
+                {
+                    flag = false;
+                    break;
+                }
+            
+            }
+        
+        }
+        
+        if(flag == true) printf("%d ", k);
+    }
+    
+    
+
+    return 0;
+}
