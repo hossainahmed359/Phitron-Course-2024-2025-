@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int arr[100000];  // Large array size to accommodate shifts
+
+int main() {
+    int length;
+
+    // Input the initial length of the array
+    scanf("%d", &length);
+
+    // Input the elements of the array
+    for (int i = 0; i < length; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    // Input the target index and value to insert
+    int target_index, value;
+    scanf("%d %d", &target_index, &value);
+
+    // Increment the length to account for the new element
+    length++;
+
+    // Shift the elements to the right starting from the target_index
+    for (int i = length - 1; i > target_index; i--) {
+        arr[i] = arr[i - 1];
+    }
+
+    // Insert the new value at the target index
+    arr[target_index] = value;
+
+    // Print the updated array
+    for (int i = 0; i < length; i++) {
+        printf("%d ", arr[i]);
+    }
+
+    printf("\n");
+
+    return 0;
+}

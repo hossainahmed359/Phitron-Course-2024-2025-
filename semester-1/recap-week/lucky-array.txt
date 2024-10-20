@@ -1,0 +1,41 @@
+
+// https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/J
+// J. Lucky Array
+#include <stdio.h>
+#include <stdbool.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    int arr[n];
+    
+    
+    for(int k = 0; k < n; k++)
+    {
+        scanf("%d", &arr[k]);
+    }
+    
+    int min = arr[0];
+    int min_count = 0;
+    
+    
+    // Iterate and get min value
+    for(int i = 0; i < n; i++)
+    {
+        if (arr[i] < min)
+            min = arr[i];
+    }
+    
+    // Count total min frequent
+    for(int i = 0; i < n; i++)
+    {
+        if (arr[i] == min) 
+            min_count++;
+    }
+
+    (min_count % 2 != 0) ? printf("Lucky\n") : printf("Unlucky\n"); 
+    
+    
+
+    return 0;
+}
