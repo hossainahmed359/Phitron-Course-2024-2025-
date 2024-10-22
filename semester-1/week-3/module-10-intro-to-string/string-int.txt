@@ -1,0 +1,37 @@
+
+#include <stdio.h>
+
+int main() {
+    char str[5] = "5";
+    printf("%d -> ASCII Value\n", str[0]);
+    printf("%d -> ASCII Value to Digit convert\n", str[0] - '0'); /* 53 - 48 */
+    printf("%c -> Character Value \n", str[0]);
+    
+    
+    return 0;
+}
+
+
+
+#include <stdio.h>
+
+int main() {
+    // String To Interger
+    char str[20];
+    int n;
+    scanf("%d", &n);
+    scanf("%s", str);
+    
+    int num = 0;
+    for(int i = 0; i < n; i++)
+    {
+        int digit = str[i] - '0';
+        printf("For num: %d , str[i]: %c digit: %d, i: %d\n", num, str[i], digit, i);
+        num = num * 10 + digit;
+    }
+    
+    printf("Output Number: %d\n", num);
+    
+
+    return 0;
+}

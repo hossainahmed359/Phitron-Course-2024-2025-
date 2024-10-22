@@ -1,0 +1,39 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/I
+// I. Palindrome
+
+#include <stdio.h>
+#include <stdbool.h>
+
+int main() {
+    
+    char str[1000];
+    scanf("%[^\n]s", str);
+    
+    int len = 0;
+    while(str[len] != '\0')
+    {
+        len++;
+    }
+    
+    bool flag = false;
+    int left = 0, right = len - 1;
+    while(left <= right)
+    {
+        if(str[left] != str[right])
+        {
+            flag = false;
+            break;
+        }
+        else {
+            flag = true;
+        }
+        
+        left++;
+        right--;
+    }
+    
+    flag ? printf("YES\n") : printf("NO\n");
+
+
+    return 0;
+}

@@ -1,0 +1,23 @@
+
+#include <stdio.h>
+
+int main() {
+    char str[10] = {'M', 'A', 'D', 'A', 'N', 'I', '\0'};
+    char some_str[] = "Hossain Ahmed Madani";
+    char thats_my_name[100];
+    // scanf("%s", thats_my_name);
+    // scanf("%s", thats_my_name);
+    // scanf("%[^\n]s", thats_my_name);  /* To take space as input */
+    
+    // fgets(thats_my_name, sizeof(thats_my_name), stdin);
+    // fputs(thats_my_name, stdout);
+    
+    // printf("%s\n", str);
+    // printf("%s\n", thats_my_name);
+    
+    // Escase Sequence
+    char my_new_str[] = "Ban\\gladesh \nis a \"beautiful\" counry!\textra tab \0null character";
+    fputs(my_new_str, stdout);
+    
+    return 0;
+}
