@@ -1,0 +1,51 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/D
+// D. Strings
+
+#include <stdio.h>
+#include <stdbool.h>
+
+int main() {
+    
+    char a[100], b[100], s[1000];
+    scanf("%s %s", a, b);
+    
+    // Finding length
+    int lenA = 0,lenB = 0;
+    while(a[lenA] != '\0')
+    {
+        lenA++;
+    }
+    while(b[lenB] != '\0')
+    {
+        lenB++;
+    }
+    
+    // Concatenating  Two Strings
+    int i = 0, j = 0;
+    while(i < lenA)
+    {
+        s[i] = a[i];
+        i++;
+        
+    }
+    while(j < lenB)
+    {
+        s[lenA + j] = b[j];
+        j++;
+    }
+    
+    // Add null terminator
+    s[lenA + lenB] = '\0';
+    
+    // Swap First Character
+    char tmp = a[0];
+    a[0] = b[0];
+    b[0] = tmp;
+    
+    printf("%d %d\n", lenA, lenB);
+    printf("%s\n", s);
+    printf("%s %s\n", a, b);
+
+
+    return 0;
+}

@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    // String compare
+    char a[100] = "airplane";
+    char b[100] = "air";
+    
+    int cmp = strcmp(a, b);
+    printf("%d\n", cmp);
+    
+    // String reverse
+    char main_str[100] = "That's my name!";
+    int len_main_str = strlen(main_str);
+    int left = 0, right = len_main_str - 1;
+    while(left <= right)
+    {
+        char tmp = main_str[left];
+        main_str[left] = main_str[right];
+        main_str[right] = tmp;
+        
+        left++;
+        right--;
+    }
+    
+    // String Reverse method
+    
+    
+    printf("%s\n", main_str);
+
+    return 0;
+}

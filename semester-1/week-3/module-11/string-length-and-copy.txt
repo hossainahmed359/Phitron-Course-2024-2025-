@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    
+    char my_str[100] = "This is an example of string.";
+    char str_duplicate[100];
+    char str_duplicate_by_func[100];
+    
+    int len = strlen(my_str);
+    
+    // Manual
+    for(int i = 0; i < len; i++)
+    {
+        str_duplicate[i] = my_str[i];
+    }
+    
+    str_duplicate[len] = '\0';
+    
+    // Function
+    // strcpy(des, source);   
+    strcpy(str_duplicate_by_func, str_duplicate);   
+    strcpy(str_duplicate_by_func, "Hello World!");   
+    
+    printf("%s", str_duplicate_by_func);
+    
+
+    return 0;
+}
