@@ -1,0 +1,55 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/C
+// C. Compare
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    // Input
+    char x[100], y[100];
+    scanf("%s %s", x, y);
+    
+    // Get Length
+    int len_x = 0, len_y = 0;
+    for(int i = 0; x[i] != '\0'; i++)
+    {
+        len_x++;
+    }
+    for(int j = 0; y[j] != '\0'; j++)
+    {
+        len_y++;
+    }
+    
+    // Compare
+    int cmp = 0;
+    int len_min = len_x < len_y ? len_x : len_y;
+    
+    for(int i = 0; i < len_min; i++)
+    {
+        cmp = x[i] - y[i];
+        if(cmp != 0) break;
+    }
+    
+    if(cmp == 0)
+    {
+        cmp = len_x - len_y;
+    }
+    
+    // Output
+    if(cmp == 0)
+    {
+        printf("%s\n", x);
+    }
+    else if (cmp < 0)
+    {
+        // x < y
+        printf("%s\n", x);
+    }
+    else if (cmp > 0)
+    {
+        // x > y
+        printf("%s\n", y);
+    }
+
+    return 0;
+}

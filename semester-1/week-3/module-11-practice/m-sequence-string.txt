@@ -1,0 +1,36 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/M
+// M. Subsequence String
+
+#include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
+
+int main() {
+    char main_str[] = "hello";
+    int len_main = strlen(main_str);
+    
+    char s[100000];
+    scanf("%s", s);
+    int len_s = strlen(s);
+    
+    bool flag = false;
+    
+    for(int i = 0, j = 0; i < len_s && j < len_main; i++)
+    {
+        if(s[i] == main_str[j]) 
+        {
+            j++;
+        }
+        
+        if(j == len_main)
+        {
+            flag = true;
+            break;
+        }
+    }
+    
+    flag ? printf("YES\n") : printf("NO\n");
+    
+    
+    return 0;
+}

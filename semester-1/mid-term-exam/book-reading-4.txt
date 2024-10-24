@@ -1,0 +1,37 @@
+// https://www.hackerrank.com/contests/mid-term-1729629486/challenges/do-it-5https://www.hackerrank.com/contests/mid-term-1729629486/challenges/book-reading-4
+// Book reading 4
+
+#include <stdio.h>
+
+int main() {
+    long long int n, t, count = 0;
+    scanf("%lld %lld", &n, &t);
+    long long int arr[n];
+    for(int i = 0; i < n; i++)
+    {
+        scanf("%lld", &arr[i]);
+    }
+   
+   for(long long int j = 0; j < n; j++)
+   {
+        t -= arr[j];
+        // printf("%lld\n", t);
+        
+        if(t >= 0) 
+        {
+            count++;
+        }
+        else 
+        {
+            break;
+        }
+        
+        // printf("%lld\n", count);
+        
+   }
+
+    
+    printf("%lld\n", count);
+    
+    return 0;
+}

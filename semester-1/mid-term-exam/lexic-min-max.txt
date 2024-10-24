@@ -1,0 +1,82 @@
+// https://www.hackerrank.com/contests/mid-term-1729629486/challenges/lexic-min-max
+// lexic Min Max
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    char a[1000], b[1000], c[1000], min[1000], max[1000];
+    scanf("%s %s %s", a ,b ,c);
+    
+    // a == b : 0
+    // a > b : 1
+    // a < b : -1
+    
+    if(strcmp(a, b) <= 0 && strcmp(a, c) <= 0) /* a is smaller */
+    {
+        strcpy(min,a);
+        
+        if(strcmp(b, c) <= 0) /* b is smaller */
+        {
+            strcpy(max, c);
+        }
+        else {
+             strcpy(max, b);
+        }
+        
+    }
+    else if(strcmp(b, a) <= 0 && strcmp(b, c) <= 0) /* b is smaller */
+    {
+        strcpy(min, b);
+        
+        if(strcmp(a, c) <= 0) /* a is smaller */
+        {
+            strcpy(max, c);
+        }
+        else {
+            strcpy(max, a);
+        }
+        
+    }
+    else /* c is smaller */
+    {
+        strcpy(min, c);
+        
+        if(strcmp(a, b) <= 0) /* a is smaller */
+        {
+            strcpy(max, b);
+        }
+        else {
+            strcpy(max, a);
+        }
+        
+    }
+    
+
+    
+    printf("%s\n%s", min, max);
+    
+    
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

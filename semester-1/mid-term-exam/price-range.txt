@@ -1,0 +1,27 @@
+// https://www.hackerrank.com/contests/mid-term-1729629486/challenges/price-range
+// Price Range
+
+#include <stdio.h>
+
+int main() {
+    long long int n, x, y, count = 0;
+    scanf("%lld %lld %lld", &n, &x, &y);
+    
+    long long int arr[n];
+    for(long long int i = 0; i < n; i++)
+    {
+        scanf("%lld", &arr[i]);
+    }
+    
+    for(long long int i = 0; i < n; i++)
+    {
+        if(arr[i] >= x && arr[i] <=y)
+        {
+            count++;
+        }
+    }
+    
+    printf("%lld\n", count);
+    
+    return 0;
+}

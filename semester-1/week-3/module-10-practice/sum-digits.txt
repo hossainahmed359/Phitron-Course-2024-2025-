@@ -1,0 +1,36 @@
+// Sum Digits
+
+// Given a number N. Now, Print the summation of all digits.
+
+// Sample Input 
+// 13305
+
+// Sample Output 
+// 12
+
+#include <stdio.h>
+
+int main() {
+    long int n;
+    scanf("%ld",&n);
+    
+    int quotient = n / 10;
+    int remainder = n % 10;
+    long int sum = remainder;
+    
+    while (quotient)
+    {
+        printf("remainder %d quotient %d\n", remainder, quotient);
+        
+        remainder = quotient % 10;
+        quotient = quotient / 10;
+        sum+= remainder;
+        
+    }
+    
+    printf("remainder %d quotient %d\n", remainder, quotient);
+    
+    printf("%ld\n", sum);
+    
+    return 0;
+}
