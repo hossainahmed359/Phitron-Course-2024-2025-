@@ -1,0 +1,27 @@
+// UNIQUE CHARACTERS
+#include <stdio.h>
+
+int main() {
+    char str[] = "apple";
+    int f[25] = {0};
+  
+    
+    for(int i = 0; str[i] != '\0'; i++)
+    {
+        int val = str[i] - 97;
+        // int val = str[i] - 'a'; -> with character
+        f[val] = 1;
+    }
+    
+    printf("\n");
+    
+    for(int i = 0; i < 25; i++)
+    
+    {
+        if(f[i])
+            printf("char: %c\n", i + 97);
+            // printf("char: %c\n", i + 'a');
+    }
+    
+    return 0;
+}

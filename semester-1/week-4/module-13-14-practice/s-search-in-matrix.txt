@@ -1,0 +1,32 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/S
+// S. Search In Matrix
+#include <stdio.h>
+
+int main() {
+    int n, m, x, flag = 0;
+    scanf("%d %d", &n, &m);
+    
+    long int arr[n][m];
+    for(int i = 0; i < n; i++) {
+        for(int j = 0; j < m; j++) {
+            scanf("%d", &arr[i][j]);
+        }
+    }
+    
+    scanf("%d", &x);
+     
+    for(int i = 0; i < n; i++) {
+        for(int j = 0; j < m; j++) {
+            if(arr[i][j] == x) flag = 1;
+        }
+    }
+    
+    if(flag) {
+        printf("will not take number\n");
+    } else {
+        printf("will take number\n");
+    }
+    
+
+    return 0;
+}

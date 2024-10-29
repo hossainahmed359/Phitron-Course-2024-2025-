@@ -1,0 +1,22 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/J
+// J. Count Letters
+#include <stdio.h>
+
+char str[10000001];
+
+int main() {
+    scanf("%s", str);
+    
+    int freq[26] = {0};
+    for(int i = 0; str[i] != '\0'; i++) {
+       int alphabet_index = str[i] - 'a';
+       freq[alphabet_index] += 1;
+    }
+    
+    for(int i = 0; i < 26; i++) {
+        char alphabet = i + 'a';
+        if(freq[i]) printf("%c : %d\n", alphabet, freq[i]);
+    }
+
+    return 0;
+}

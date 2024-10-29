@@ -1,0 +1,36 @@
+
+/*
+Problem Statement: Given a string of length N. Print the unique characters in the string in increasing alphabetical order.
+
+Input -> Output
+3     -> abc
+abc 
+
+5     -> aelp
+apple 
+
+*/
+#include <stdio.h>
+
+int main() {
+    int n, freq[26] = {0};
+    scanf("%d", &n);
+    
+    char str[n];
+    scanf("%s", str);
+    
+    for(int i = 0; str[i] != '\0'; i++) {
+        int alphabet_index = str[i] - 'a';
+        freq[alphabet_index] = 1;
+    }
+    
+    for(int i = 0; i < 26; i++) {
+        if(freq[i]) {
+            char alphabet = i + 'a';
+            printf("%c", alphabet);
+        }
+    }
+    
+
+    return 0;
+}

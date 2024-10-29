@@ -1,0 +1,22 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/V
+// V. Frequency Array
+#include <stdio.h>
+
+int main() {
+    long int n, m, freq[100000 + 1] = {0}; // 10^5
+    scanf("%ld %ld", &n, &m);
+    
+    long int arr[n];
+    for(long int i = 0; i < n; i++) {
+        scanf("%ld", &arr[i]);
+        
+        long int freq_index = arr[i];
+        freq[freq_index] += 1;
+    }
+    
+     for(long int i = 1; i <= m; i++) {
+        printf("%ld\n", freq[i]);
+     }
+
+    return 0;
+}

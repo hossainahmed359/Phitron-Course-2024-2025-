@@ -1,0 +1,33 @@
+/*
+Problem Statement: Given an integer N (1 <= N <= 10^5) and an array of N numbers (1 <= A[i] <= 10^5). Print how many unique numbers are in the array.f
+
+Sample Input -> Sample Output
+5            -> 3
+1 2 1 4 2
+7            -> 4
+1 1 2 3 2 3 7
+5            -> 5
+1 2 3 4 5
+
+*/
+
+#include <stdio.h>
+
+int main() {
+    long int n, unique_numbers = 0,freq[100001] = {0};
+    scanf("%ld", &n);
+    
+    long int arr[n];
+    for(long int i = 0; i < n; i++) {
+        scanf("%ld", &arr[i]);
+        long long int freq_index = arr[i];
+        freq[freq_index] += 1;
+    }
+    for(long int i = 0; i < 100001; i++) {
+        if(freq[i]) unique_numbers++; 
+    }
+    
+    printf("%ld\n", unique_numbers);
+
+    return 0;
+}
