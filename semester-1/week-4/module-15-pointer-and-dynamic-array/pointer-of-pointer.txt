@@ -1,0 +1,14 @@
+// POINTER OF POINTER
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int a = 5;
+    int *p = &a;
+    int **p_of_p = &p; /* Defererance **p_of_p */
+    printf("%d %d\n", p_of_p, &p);
+    printf("%d %d\n", *p_of_p, &a);
+    printf("%d %d\n", **p_of_p, a);
+
+    return 0;
+}

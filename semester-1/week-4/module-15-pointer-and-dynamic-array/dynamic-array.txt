@@ -1,0 +1,41 @@
+// DYNAMIC ARRAY
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int *arr_two = (int *)calloc(5 , sizeof(int)); // -> Removes Grabage Value -> initaializing with 0
+    
+    // Allocate Memory
+    int *arr = (int *)malloc(5 * sizeof(int)); 
+    
+    // Assign Values to array
+    for(int i = 0; i < 5; i++) {
+        arr[i] = i + 1;
+    }
+    
+    // Re-Allocate Memory
+    int *tmp = arr;
+    arr = (int *)realloc(arr, 10 * sizeof(int));
+    if(arr == NULL) {
+        arr = tmp;
+    }
+    
+    // Assign Values to array of the added indexes
+    for(int i = 5; i < 10; i++) {
+        arr[i] = i * 2;
+    }
+    
+    // Output Value
+    for(int i = 0; i < 10; i++) {
+        printf("%d ", arr[i]);
+    }
+    
+    printf("\n");
+    
+    // De-Allocate
+    free(arr);
+    
+    printf("%d ", arr[0]);
+
+    return 0;
+}

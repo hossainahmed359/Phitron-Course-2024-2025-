@@ -1,0 +1,38 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/A
+// A. Summation
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+
+int main() {
+    long long int n;
+    long long int sum = 0;
+    long long int *ptrSum = &sum;
+    scanf("%lld", &n);
+    
+    long long int *arr = (long long int *)malloc(n * sizeof(long long int));
+    if(arr == NULL) {
+        printf("Memory allocation failed\n");
+        return 1;
+    }
+    
+    for(long long int i = 0; i < n; i++) {
+        long long int *ptrI = arr + i;
+        scanf("%lld", ptrI);
+    }
+    
+    for(long long int i = 0; i < n; i++) {
+        long long int *ptrI = arr + i;
+        *ptrSum += *ptrI;
+        
+    }
+    
+    printf("%lld\n", llabs(*ptrSum));
+    
+    free(arr);
+    
+    
+
+    return 0;
+}

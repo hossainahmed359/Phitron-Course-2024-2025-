@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+// https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/A
+// A. Add
+int getSum(long int x, long int y) {
+    long int *ptrX = &x, *ptrY = &y;
+    return (long long int) *ptrX + *ptrY;
+}
+
+// https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/E
+// E. Swap
+void swap(long int *x, long int *y) {
+    long int tmp = *x;
+    *x = *y;
+    *y = tmp;
+}
+
+
+int main() {
+    long int x, y;
+    scanf("%ld %ld", &x, &y);
+    
+    // A. Add -> OUTPUT
+    // long long sum = getSum(x, y);
+    // printf("%lld\n", sum);
+    
+    // E. Swap -> OUTPUT
+    swap(&x, &y);
+    printf("%ld %ld", x, y);
+
+    return 0;
+}

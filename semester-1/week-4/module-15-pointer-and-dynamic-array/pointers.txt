@@ -1,0 +1,24 @@
+/* POINTERS */
+#include <stdio.h>
+
+int main() {
+    int a = 5;
+    int *b = &a; 
+    int c = *b;
+    *b = 6;
+    // referance & dereferance
+    printf("Original Value:%d\nMemory Location/Pointer: %d\nDe-Referance/Stored Data: %d\n",c, b, *b);
+    
+    // Swap with pointer
+    int m = 333, n = 555;
+    int *x = &m, *y = &n;
+    
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+    
+    printf("Swaped Value: %d %d", m, n);
+    
+
+    return 0;
+}

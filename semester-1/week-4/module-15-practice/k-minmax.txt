@@ -1,0 +1,45 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/K
+// K. Max and Min || USING POINTERS
+#include <stdio.h>
+
+int minAndMax(long int x, long int y, long int z) {
+    long int *ptrX = &x, *ptrY = &y, *ptrZ = &z;
+    long int **ptrMin, **ptrMax;
+    
+    if(*ptrX <= *ptrY && *ptrX <= *ptrZ) {
+        ptrMin = &ptrX;
+        if(*ptrY <= *ptrZ) {
+            ptrMax = &ptrZ;
+        } else {
+            ptrMax = &ptrY;
+        }
+    }
+    else if(*ptrY <= *ptrX && *ptrY <= *ptrZ) {
+        ptrMin = &ptrY;
+        if(*ptrX <= *ptrZ) {
+            ptrMax = &ptrZ;
+        } else {
+            ptrMax = &ptrX;
+        }
+    }
+    else {
+        ptrMin = &ptrZ;
+        if(*ptrX <= *ptrY) {
+            ptrMax = &ptrY;
+        } else {
+            ptrMax = &ptrX;
+        }
+    }
+    
+    printf("%ld %ld\n", **ptrMin, **ptrMax);
+    
+}
+
+int main() {
+    long int x, y, z;
+    scanf("%ld %ld %ld", &x, &y, &z);
+    // Output -> Min & Max
+    minAndMax(x, y, z);
+
+    return 0;
+}
