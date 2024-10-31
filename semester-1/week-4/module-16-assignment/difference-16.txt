@@ -1,0 +1,16 @@
+// https://www.hackerrank.com/contests/b6-assignment-03-c/challenges/difference-16-1
+// Difference 16
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int a, b, diff = 0;
+    int *ptrA = &a, *ptrB = &b, *ptrDiff = &diff;
+    scanf("%d %d", &a, &b);
+    
+    *ptrDiff = *ptrA - *ptrB;
+    
+    printf("%d\n", abs(diff));
+    
+    return 0;
+}
