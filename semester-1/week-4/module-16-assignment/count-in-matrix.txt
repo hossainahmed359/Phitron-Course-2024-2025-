@@ -1,0 +1,34 @@
+// https://www.hackerrank.com/contests/b6-assignment-03-c/challenges/count-in-matrix
+// Count in matrix
+#include <stdio.h>
+
+int main() {
+    int n, m, x;
+    int freq[1001] = {0};
+    scanf("%d %d %d", &n, &m, &x);
+    
+    int matrix[n][m];
+    for(int i = 0; i < n; i++) {
+        for(int j = 0; j < m; j++) {
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+    
+    int arr[x];
+    for(int i = 0 ; i < x; i++) {
+        scanf("%d", &arr[i]);
+    }
+    
+    for(int i = 0; i < n; i++) {
+        for(int j = 0; j < m; j++) {
+            int value = matrix[i][j];
+            freq[value] += 1;
+        }
+    }
+    
+    for(int i = 0 ; i < x; i++) {
+        printf("%d\n", freq[arr[i]]);
+    }
+    
+    return 0;
+}

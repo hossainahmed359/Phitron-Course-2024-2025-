@@ -1,0 +1,24 @@
+// https://www.hackerrank.com/contests/b6-assignment-03-c/challenges/no-repeatation
+// No Repeatation
+#include <stdio.h>
+
+int main() {
+    long int n, count = 0;
+    scanf("%ld", &n);
+    
+    long int arr[n], freq[100005] = {0};
+    for(int i = 0; i < n; i++) {
+        scanf("%ld", &arr[i]);
+        freq[arr[i]]++;
+    }
+    for(int i = 0; i < 100005; i++) {
+        if(freq[i] == 1) {
+           count++;
+        }
+    }
+    
+    printf("%ld\n", count);
+    
+    
+    return 0;
+}
