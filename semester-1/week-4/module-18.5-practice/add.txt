@@ -1,0 +1,15 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/A
+// A. Add | With Function
+#include <stdio.h>
+
+int sum (long int a, long int b) {
+    return a + b;
+}
+
+int main() {
+    long int a, b;
+    scanf("%ld %ld", &a, &b);
+    printf("%ld\n", sum(a, b));
+
+    return 0;
+}

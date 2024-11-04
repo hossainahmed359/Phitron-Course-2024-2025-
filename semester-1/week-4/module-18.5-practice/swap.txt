@@ -1,0 +1,18 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/E
+// E. Swap
+#include <stdio.h>
+
+void swap (long int *ptrA, long int *ptrB) {
+    long int tmp = *ptrA;
+    *ptrA = *ptrB;
+    *ptrB = tmp;
+}
+
+int main() {
+    long int a, b;
+    scanf("%ld %ld", &a, &b);
+    swap(&a, &b);
+    printf("%ld %ld\n", a, b);
+
+    return 0;
+}
