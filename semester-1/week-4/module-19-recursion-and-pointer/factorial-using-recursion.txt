@@ -1,0 +1,16 @@
+// Factorial using recursion
+#include <stdio.h>
+
+long long int getFactorial(int n) {
+    if(n <= 1) return 1;
+    long long int factorial = n * getFactorial(n - 1);
+    return factorial;
+    
+}
+
+int main() {
+    long long int factorial = getFactorial(5);
+    printf("%lld\n", factorial);
+
+    return 0;
+}
