@@ -1,0 +1,36 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/I
+// I. Count Vowels
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int countVowels (char str[], int start, int end) {
+    if(start >= end) {
+        char lowerLetter = tolower(str[start]);
+        if(
+            lowerLetter == 'a' || lowerLetter == 'e' ||
+            lowerLetter == 'i' || lowerLetter == 'o' ||
+            lowerLetter == 'u'
+        ) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+    
+    int mid = (start + end) / 2;
+    int leftCount = countVowels(str, start, mid);
+    int rightCount = countVowels(str, mid + 1, end);
+    return leftCount + rightCount;
+}
+
+int main() {
+    char str[500];
+     scanf("%[^\n]s", str);
+    
+    int totalVowels = countVowels(str, 0, strlen(str) - 1);
+    
+    printf("%d\n", totalVowels);
+
+    return 0;
+}

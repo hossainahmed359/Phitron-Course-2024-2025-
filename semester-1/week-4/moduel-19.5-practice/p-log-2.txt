@@ -1,0 +1,22 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/P
+// P. Log2
+#include <stdio.h>
+
+int calculateLogBase2(long long n) {
+    if (n <= 1) {
+        return 0;
+    }
+    else {
+        return 1 + calculateLogBase2(n / 2);
+    }
+}
+
+int main() {
+    long long n;
+    scanf("%lld", &n);
+    
+    int logValue = calculateLogBase2(n);
+    printf("%d\n", logValue);
+
+    return 0;
+}

@@ -1,0 +1,33 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/K
+// K. Max Number
+#include <stdio.h>
+
+long int getMax(long int arr[], int start, int end) {
+    if(start >= end) return arr[start];
+    
+    int mid = (start + end) / 2;
+    
+    long int leftMax = getMax(arr, start, mid);
+    long int rightMax = getMax(arr, mid + 1, end);
+    
+    if(leftMax > rightMax) {
+        return leftMax;
+    } else {
+        return rightMax;
+    }
+}
+
+int main() {
+    long int n;
+    scanf("%d", &n);
+    long int arr[n];
+    for(int i = 0; i < n; i++) {
+        scanf("%ld", &arr[i]);
+    }
+    
+    long int max = getMax(arr, 0, n - 1);
+    
+    printf("%ld\n", max);
+
+    return 0;
+}
