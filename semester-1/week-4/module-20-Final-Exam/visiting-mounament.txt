@@ -1,0 +1,24 @@
+// https://www.hackerrank.com/contests/b6-final-c/challenges/visiting-monument
+// Visiting Monument
+#include <stdio.h>
+
+int main() {
+    int tests;
+    scanf("%d", &tests);
+    
+    for(int t = 0; t < tests; t++) {
+        int n;
+        scanf("%d", &n);
+        
+        for(int i = 1; i <= n; i++) {
+            printf("%d ", i);
+        }
+        for(int i = n - 1; i >= 1; i--) {
+            printf("%d ", i);
+        }
+        
+        printf("\n");
+    }
+
+    return 0;
+}

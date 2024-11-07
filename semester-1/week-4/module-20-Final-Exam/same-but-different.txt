@@ -1,0 +1,27 @@
+// https://www.hackerrank.com/contests/b6-final-c/challenges/same-same-but-different-1-1
+// Same same but different
+#include <stdio.h>
+#include <string.h>
+
+
+int main() {
+    char strOne[105], strTwo[105], strThree[105];
+    scanf("%s %s %s", strOne, strTwo, strThree);
+    
+    int len = strlen(strOne), count = 0;
+    
+    for(int i = 0; i < len; i++) {
+        if(strOne[i] != strTwo[i]) {
+            count++;
+        }
+        
+        if(strOne[i] != strThree[i]) {
+            count++;
+        }
+    }
+    
+    printf("%d", count);
+
+    return 0;
+    
+}

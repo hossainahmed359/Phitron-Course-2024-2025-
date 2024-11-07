@@ -1,0 +1,27 @@
+// https://www.hackerrank.com/contests/b6-final-c/challenges/find-the-missing-number-11-3
+// Find the Missing Number
+#include <stdio.h>
+
+int main() {
+    int tests;
+    scanf("%d", &tests);
+    
+    for(int t = 0; t < tests; t++) {
+        long long int m;
+        long int a, b, c, d;
+        scanf("%lld %ld %ld %ld", &m, &a, &b, &c);
+        
+        if(m == 0) {
+            d = 0;
+        } else if( m < a * b * c || m % (a * b * c) != 0) {
+            d = -1;
+        } else {
+            d =  m / (a * b * c);
+        }
+        
+        printf("%ld\n", d);
+    }
+
+    return 0;
+    
+}
