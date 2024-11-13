@@ -1,0 +1,11 @@
+
+
+//https://www.hackerrank.com/contests/practice-contest-a-introduction-to-c-programming-a-batch-6/challenges/print-it-4/submissions/code/1385296449
+// Print It
+#include <stdio.h>
+
+int main() {
+    printf("Hello, world! I am learning C programming language. ^_^\nProgramming is fun and challenging. /\\/\\/\\\nI want to give my 100%% dedication to learn!\tI will succeed one day.");
+
+    return 0;
+}

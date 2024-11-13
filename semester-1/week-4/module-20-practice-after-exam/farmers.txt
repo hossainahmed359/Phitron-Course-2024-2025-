@@ -1,0 +1,19 @@
+// https://www.hackerrank.com/contests/practice-contest-a-introduction-to-c-programming-a-batch-6/challenges/farmers-1/submissions/code/1385297726
+// Farmers
+
+
+#include <stdio.h>
+
+int main() {
+    int tst;
+    scanf("%d", &tst);
+    
+    for(int t = 0; t < tst; t++) {
+      int m1, m2, d, d2;
+      scanf("%d %d %d", &m1, &m2, &d);
+      d2 = (m1  * d) /  (m1 + m2);
+      printf("%d\n", d - d2);
+    }
+
+    return 0;
+}
