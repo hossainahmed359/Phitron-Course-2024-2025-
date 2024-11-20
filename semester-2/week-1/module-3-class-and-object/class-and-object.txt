@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class Student {
+  public:
+    char name[100];
+    int roll;
+    double gpa;
+};
+
+int main() 
+{
+    Student a;
+    // a.roll = 10;
+    // a.gpa = 4;
+    // char tmp[100] = "My New Name";
+    // strcpy(a.name, tmp);
+    
+    // cin >> a.name >> a.roll >> a.gpa;
+    cin.getline(a.name, 100); // To count spaces
+    cin.ignore();  // Otherwise the on any enter getline will take input
+    cin >> a.roll >> a.gpa;
+    
+    cout << a.name << " " << a.roll << " " << a.gpa  << endl;
+    
+    return 0;
+}

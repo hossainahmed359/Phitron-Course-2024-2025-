@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class Student {
+  public:
+    char name[100];
+    int roll;
+    int cls;
+    double gpa;
+    
+    Student(int roll, int cls, double gpa) {
+      this->roll  = roll;
+      this->cls = cls;
+      this->gpa = gpa;
+    }
+};
+
+
+Student *funDynamic() {
+  Student *c = new Student(5969, 4, 3.78);
+  return c;
+    
+}
+
+int main() 
+{
+    Student a(4404, 4, 3.78);
+    Student *b = new Student(4531, 4, 3.78);
+    Student *d = funDynamic();
+    
+    cout << b->roll << " " << b->cls << " " << b->gpa << endl;
+    cout << d->roll << " " << d->cls << " " << d->gpa << endl;
+
+    
+    return 0;
+}

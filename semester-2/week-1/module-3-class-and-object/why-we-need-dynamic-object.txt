@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class Student {
+  public:
+    char name[100];
+    int roll;
+    int cls;
+    double gpa;
+    
+    Student(int roll, int cls, double gpa) {
+      this->roll  = roll;
+      this->cls = cls;
+      this->gpa = gpa;
+    }
+};
+
+Student* funStatic () { // All value is removed when returned, can not be accessed with pointer
+  Student john(4531, 4, 3.8);
+  Student *p = &john;
+  return p;
+}
+
+
+int main() 
+{
+    Student *obj = funStatic();
+    
+    cout << (*obj).roll << " " << (*obj).cls << " " << (*obj).gpa << endl;
+
+    
+    return 0;
+}

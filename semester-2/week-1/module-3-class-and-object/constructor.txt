@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class Student {
+  public:
+    char name[100];
+    int roll;
+    int cls;
+    double gpa;
+    
+    Student(char name, int r, int cl, double gp) {
+      roll  = r;
+      cls = cl;
+      gpa = gp;
+    }
+    
+  
+};
+
+int main() 
+{
+    Student john(4531, 4, 3.8);
+
+    
+    return 0;
+}

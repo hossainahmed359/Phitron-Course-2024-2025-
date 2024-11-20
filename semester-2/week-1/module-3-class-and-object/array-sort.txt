@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+
+
+int main() 
+{
+    
+    int arr[] = {9, 20, 3, 4, 5};
+    sort(arr, arr + 4); // ascending
+    for (int i =0; i < 5; i++) {
+      std::cout << arr[i] << std::endl;
+    }
+    sort(arr, arr + 4, greater<int>()); // desending
+    for (int i =0; i < 5; i++) {
+      std::cout << arr[i] << std::endl;
+    }
+    
+    return 0;
+}
