@@ -1,0 +1,42 @@
+// https://www.hackerrank.com/contests/mid-term-a-introduction-to-c-for-dsa/challenges/who-is-it-4/submissions/code/1385696871
+// Who Is It
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+class Student {
+  public:
+    int id;
+    char name[101];
+    char section;
+    int totalMarks;
+    
+};
+
+int main() 
+{
+    int tst;
+    cin >> tst;
+    
+    for (int t = 0; t < tst; t++) {
+        Student a;
+        Student b;
+        Student c;
+        
+        cin >> a.id >> a.name >> a.section >> a.totalMarks;
+        cin >> b.id >> b.name >> b.section >> b.totalMarks;
+        cin >> c.id >> c.name >> c.section >> c.totalMarks;
+        
+        if(a.totalMarks >= b.totalMarks && a.totalMarks >= c.totalMarks) {
+          cout << a.id << " " << a.name << " " << a.section << " " << a.totalMarks <<endl;
+        } else if (b.totalMarks >= a.totalMarks && b.totalMarks >= c.totalMarks) {
+          cout << b.id << " "  << b.name << " " << b.section << " "  << b.totalMarks << endl;
+        } else {
+          cout << c.id << " " << c.name << " "  << c.section << " "  << c.totalMarks << endl;
+        }
+        
+    }
+    
+    return 0;
+}

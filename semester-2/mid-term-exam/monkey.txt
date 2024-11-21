@@ -1,0 +1,33 @@
+// https://www.hackerrank.com/contests/mid-term-a-introduction-to-c-for-dsa/challenges/monkey-1-2/submissions/code/1385696581
+// Monkey
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int main() 
+{
+    char s[1000000];
+    
+    while(cin.getline(s, 1000000)) {
+      
+      int alp[26] = {0};
+      for (int i = 0; s[i] != '\0'; i++) {
+        if(s[i] >= 'a' && s[i] <= 'z') {
+          alp[s[i] - 'a']++; 
+        }
+      }
+      
+      for (int i = 0; i < 26; i++) {
+        if(alp[i] > 0) {
+          for (int j = 1; j <= alp[i]; j++) {
+            cout << char('a' + i);
+          }
+        }
+      }
+      
+      cout << endl;
+    }
+    
+    return 0;
+}
