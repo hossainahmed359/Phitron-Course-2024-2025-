@@ -1,0 +1,29 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/V
+// V. Comparison
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int a, b;
+    char cmp_operator;
+    bool flag = false;
+    cin >> a >> cmp_operator >> b;
+    
+    switch(cmp_operator) {
+      case '>' :
+        flag = a > b;
+        break;
+      case '=' :
+        flag = a == b;
+         break;
+      case '<' :
+        flag = a < b;
+         break;
+    }
+    
+    cout <<  (flag ? "Right" : "Wrong") << endl ;
+    
+    return 0;
+}

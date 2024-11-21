@@ -1,0 +1,32 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/W
+// W. Mathematical Expression
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int a, b, c, d = 0;
+    char m_operator, equal_operator;
+    cin >> a >> m_operator >> b >> equal_operator >> c;
+    
+    switch(m_operator) {
+      case '+' :
+        d = a + b;
+        break;
+      case '-' :
+        d = a - b;
+         break;
+      case '*' :
+        d = a * b;
+         break;
+    }
+    
+    if(c == d) {
+      cout << "Yes" << endl;
+    } else {
+      cout << d << endl;
+    }
+    
+    return 0;
+}
