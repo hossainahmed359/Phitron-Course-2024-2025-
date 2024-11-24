@@ -1,0 +1,81 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    string s = "HELLO", s2 = "HELLO";
+    s = "SOMETHING ELSE";
+    cout <<s;
+    
+    // comparison
+    if(s == s2) {
+      //
+    }
+    
+
+    // string s = "This is an example of string";
+   
+    
+    std::cout << s.size() << " " << s.max_size() << " " << s.capacity() << " " << s.empty() << std::endl;
+    
+    s.clear();
+    
+    s.resize(5);
+    // s.resize(50, 'x');
+    // s.resize(50, ' ');
+    s+= s2;
+    s += "New String";
+    s.append(s2);
+    s.push_back('A'); // Only append char
+    
+    s.size();
+    s.begin();
+    s.end();
+
+    for(string::iterator it = s.begin(); it < s.end(); it++) {
+      cout << *(it) << endl;
+    }
+
+    for(auto it = s.begin(); it < s.end(); it++) {
+      cout << *(it) << endl;
+    }
+
+    for(int it = 0; it < s.size(); it++) {
+      cout << s[it] << endl;
+    }
+    
+
+    
+    cout << s;
+
+    int x;
+    string s2;
+    std::cin >> x;
+    cin.ignore(); // IF enter issue arises
+    getline(cin, s2);
+    
+    
+    std::cout << s2 << std::endl;
+
+    stringstream ss(s);
+    
+    string word;
+    // ss >> word;
+    // std::cout << word << std::endl;
+    // ss >> word;
+    // std::cout << word << std::endl;
+    // ss >> word;
+    // std::cout << word << std::endl;
+    // ss >> word;
+    // std::cout << word << std::endl;
+    // ss >> word;
+    // std::cout << word << std::endl;
+    // ss >> word;
+    // std::cout << word << std::endl;
+    
+    while(ss >> word) {
+       std::cout << word << std::endl;
+    }
+    
+    return 0;
+}
