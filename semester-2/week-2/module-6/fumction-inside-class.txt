@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+
+class Student {
+    public:
+      string name;
+      int roll;
+      
+    Student(string name, int roll) {
+      (*this).name = name;
+      this->roll = roll;
+    }
+    
+    void printSomething() {
+        cout << "Heelo" << 21 + 1;
+    }
+};
+
+int main() 
+{
+    
+    Student s("Ahmed", 1111);
+    std::cout << s.name << " " << s.roll << std::endl;
+
+    
+    
+    return 0;
+}

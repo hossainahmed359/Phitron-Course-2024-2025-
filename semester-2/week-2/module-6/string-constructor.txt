@@ -1,0 +1,60 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    string s = "Hello World!";
+    string s2("Hello World using constructor");
+    string s3(10, 'A');
+    
+    cout << s << endl;
+    cout << s2 << endl;
+    cout << s3 << endl;
+    
+    // sort(s.begin(), s.end());
+    // reverse(s.begin(), s.end());
+    // cout << s << endl;
+    
+    
+    // for (int i = 0; i < s2.size(); i++) {
+    //   cout << s2[i] << endl;
+    // }
+    
+    // for (char c : s) {
+    //   cout << c << endl;
+    // }
+    
+    
+    
+    return 0;
+}
+
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+class Student {
+    public:
+      string name;
+      int roll;
+      
+    Student(string name, int roll) {
+      (*this).name = name;
+      this->roll = roll;
+    }
+    
+    
+};
+
+int main() 
+{
+    
+    Student s("Ahmed", 1111);
+    std::cout << s.name << " " << s.roll << std::endl;
+
+    
+    
+    return 0;
+}

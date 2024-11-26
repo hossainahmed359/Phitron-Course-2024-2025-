@@ -1,0 +1,45 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/U
+// U. New Words
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+
+    int egypt[5] = {0};
+
+    string s;
+    cin >> s;
+    
+    for (char c : s) {
+       if(c == 'E' || c == 'e') {
+         egypt[0] += 1;
+       }
+       if(c == 'G' || c == 'g') {
+         egypt[1] += 1;
+       }
+       if(c == 'Y' || c == 'y') {
+         egypt[2] += 1;
+       }
+       if(c == 'P' || c == 'p') {
+         egypt[3] += 1;
+       }
+       if(c == 'T' || c == 't') {
+         egypt[4] += 1;
+       }
+    }
+    
+    
+    int minCount = egypt[0];
+    for (int i : egypt) {
+       if(i < minCount) {
+         minCount = i;
+       }
+    }
+  
+    
+    cout << minCount;
+    
+    return 0;
+}

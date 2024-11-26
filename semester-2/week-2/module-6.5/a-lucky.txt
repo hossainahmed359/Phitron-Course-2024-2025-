@@ -1,0 +1,36 @@
+// https://codeforces.com/contest/1676/problem/A
+// A. Lucky?
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int tst;
+    cin >> tst;
+    
+    for (int t = 0; t < tst; t++) {
+      string s;
+      cin >> s;
+      
+      int sum_left = 0, sum_right = 0;
+      
+      for (int i = 0; i < 3; i++) {
+          sum_left += (s[i] - '0');
+      }
+      
+      for (int i = 3; i < s.size(); i++) {
+          sum_right += (s[i] - '0');
+      }
+      
+      if(sum_left == sum_right) {
+        cout << "YES" << endl;
+      } else {
+        cout << "NO" << endl;
+      }
+      
+    }
+   
+    
+    return 0;
+}

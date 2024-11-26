@@ -1,0 +1,36 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/I
+// I. Palindrome
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    string s;
+    cin >> s;
+    
+    bool flag = true;
+    
+   
+    int left = 0, right = s.size() - 1;
+    while(left <= right) {
+      if(s[left] != s[right]) {
+        flag = false;
+        break;
+      }
+      
+      left++;
+      right--;
+    }
+    
+    
+    if(flag) {
+      cout << "YES" << endl;
+    } else {
+      cout << "NO" << endl;
+    }
+    
+   
+    
+    return 0;
+}

@@ -1,0 +1,45 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+
+class Student {
+    public:
+      string name;
+      int roll;
+      
+    Student(string name, int roll) {
+      this->name = name;
+      this->roll = roll;
+    }
+    
+    
+};
+
+int main() 
+{
+    
+    Student *student = new Student("Hossain", 1111);
+    Student *student2 = new Student("Ahmed", 2222);
+    
+    // student2 = student;
+    
+    // delete student;
+    
+    // cout << student2->name << endl;
+    
+    // This will cause error as student2 points to student
+    
+    
+    
+    // correct way
+    student2->name = student->name;
+    student2->roll = student->roll;
+    
+    delete student;
+    
+    cout << student2->name << endl;
+
+    
+    
+    return 0;
+}
