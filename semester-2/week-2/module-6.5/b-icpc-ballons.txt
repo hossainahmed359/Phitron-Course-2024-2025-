@@ -1,0 +1,36 @@
+// https://codeforces.com/contest/1703/problem/B
+// B. ICPC Balloons
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    int tst;
+    cin >> tst;
+    
+    for (int t = 0; t < tst; t++) {
+        int arr[26] = {0};
+        
+        int n, ballons = 0;
+        string s;
+    
+        cin >> n >> s;
+        
+        for (char ch : s) {
+          
+            if(arr[ch - 'A'] == 0) {
+                ballons += 2;
+            } else if (arr[ch - 'A'] >= 1) {
+                ballons += 1;
+            }
+            
+            arr[ch - 'A'] += 1;
+         }
+         
+        cout << ballons << endl;
+      
+    }
+    
+    return 0;
+}

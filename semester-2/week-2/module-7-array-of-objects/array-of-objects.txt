@@ -1,0 +1,94 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+// Define the Student structure
+struct Student {
+    int id;
+    string name;
+    int marks;
+};
+
+// Function to swap two students
+void swapStudents(Student& a, Student& b) {
+    Student temp = a;
+    a = b;
+    b = temp;
+}
+
+// Function to find the student with the maximum marks
+Student findMax(Student arr[], int n) {
+    Student maxStudent = arr[0];
+    for (int i = 1; i < n; ++i) {
+        if (arr[i].marks > maxStudent.marks) {
+            maxStudent = arr[i];
+        }
+    }
+    return maxStudent;
+}
+
+// Function to find the student with the minimum marks
+Student findMin(Student arr[], int n) {
+    Student minStudent = arr[0];
+    for (int i = 1; i < n; ++i) {
+        if (arr[i].marks < minStudent.marks) {
+            minStudent = arr[i];
+        }
+    }
+    return minStudent;
+}
+
+// Custom comparator for sorting students
+bool compareStudents(const Student& a, const Student& b) {
+    if (a.marks == b.marks) {
+        return a.id < b.id; // Sort by ID if marks are equal
+    }
+    return a.marks > b.marks; // Sort in descending order of marks
+}
+
+int main() {
+    // Number of students
+    int n;
+    cin >> n;
+
+    // Create a list of students
+    Student arr[n];
+    for (int i = 0; i < n; ++i) {
+        cin >> arr[i].name >> arr[i].id >> arr[i].marks;
+    }
+
+    // Print the initial list of students
+    cout << "\nInitial list of students:\n";
+    for (int i = 0; i < n; ++i) {
+        cout << "Name: " << arr[i].name 
+             << ", ID: " << arr[i].id 
+             << ", Marks: " << arr[i].marks << endl;
+    }
+
+    // Find the student with the maximum marks
+    Student maxStudent = findMax(arr, n);
+    cout << "\nStudent with the maximum marks:\n";
+    cout << "ID: " << maxStudent.id
+         << ", Name: " << maxStudent.name
+         << ", Marks: " << maxStudent.marks << endl;
+
+    // Find the student with the minimum marks
+    Student minStudent = findMin(arr, n);
+    cout << "\nStudent with the minimum marks:\n";
+    cout << "ID: " << minStudent.id
+         << ", Name: " << minStudent.name
+         << ", Marks: " << minStudent.marks << endl;
+
+    // Sort the students by marks (and ID if marks are equal)
+    sort(arr, arr + n, compareStudents);
+
+    // Print the sorted list of students
+    cout << "\nStudents sorted by marks:\n";
+    for (int i = 0; i < n; ++i) {
+        cout << "Name: " << arr[i].name 
+             << ", ID: " << arr[i].id 
+             << ", Marks: " << arr[i].marks << endl;
+    }
+
+    return 0;
+}
