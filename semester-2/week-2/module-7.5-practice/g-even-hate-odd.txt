@@ -1,0 +1,105 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/329103/problem/G
+// G. Even Hate Odd 
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+    int tst;
+    cin >> tst;
+    
+    for (int t = 0; t < tst; t++) {
+        int n;
+        cin >> n;
+        
+        int arr[n];
+        int evenCount = 0; int oddCount = 0;
+        for (int i = 0; i < n; i++) {
+            cin >> arr[i];
+            
+            if(arr[i] % 2 == 0) {
+                evenCount++;
+            } else {
+                oddCount++;
+            }
+            
+        }
+        
+        int count = 0;
+        
+        if(n%2 != 0) {
+            count = -1;
+        } else if(evenCount && oddCount && evenCount - oddCount) {
+            while(evenCount != oddCount) {
+              if(evenCount > oddCount) {
+                  evenCount--;
+                  oddCount++;
+                  
+                  count++;
+              } else {
+                  evenCount++;
+                  oddCount--;
+                  
+                  count++;
+              }
+            }
+            
+        } else if (evenCount == n || oddCount == n) {
+            count = n / 2;
+        }
+        
+        cout << count << endl;
+        
+    }
+  
+
+    return 0;
+}
+
+
+// Chat GPT
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+    int tst;
+    cin >> tst;
+    
+    for (int t = 0; t < tst; t++) {
+        int n;
+        cin >> n;
+        
+        int arr[n];
+        int evenCount = 0; int oddCount = 0;
+        for (int i = 0; i < n; i++) {
+            cin >> arr[i];
+            
+            if(arr[i] % 2 == 0) {
+                evenCount++;
+            } else {
+                oddCount++;
+            }
+            
+        }
+        
+        
+        if(n%2 != 0) {
+            cout << -1 << endl;
+        } else {
+            int diff = abs(evenCount - oddCount);
+
+            if(diff % 2 == 0) {
+                cout << diff << endl;
+            } else {
+                cout  << - 1 << endl;
+            }
+
+        }
+        
+    }
+  
+
+    return 0;
+}
