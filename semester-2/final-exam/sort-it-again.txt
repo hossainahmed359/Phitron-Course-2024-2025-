@@ -1,0 +1,58 @@
+// https://www.hackerrank.com/contests/final-exam-a-introduction-to-c-for-dsa-a-batch-06/challenges/sort-it-again
+// Sort It Again
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Student {
+    public:
+        string nm;
+        int cls;
+        char s;
+        long int id;
+        int math_marks;
+        int eng_marks;
+};
+
+bool compareStudents(Student a, Student b) {
+    int engA = a.eng_marks;
+    int engB = b.eng_marks;
+    
+    int mathA = a.math_marks;
+    int mathB = b.math_marks;
+    
+    int idA = a.id;
+    int idB = b.id;
+    
+    if(engA != engB) {
+        return engB < engA;
+    }
+    else if(mathA != mathB) {
+        return mathB < mathA;
+    }
+    else {
+        return idA < idB;
+    }
+}
+
+int main()
+{
+    int n;
+    cin >> n;
+    
+    Student arr[n];
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i].nm >> arr[i].cls >> arr[i].s >> arr[i].id >> arr[i].math_marks >> arr[i].eng_marks;
+    }
+    
+    
+    sort(arr, arr + n, compareStudents);
+    
+    
+    for (int i = 0; i < n; i++) {
+        cout << arr[i].nm << " " << arr[i].cls << " " << arr[i].s << " " << arr[i].id << " " <<  arr[i].math_marks << " " << arr[i].eng_marks << endl;
+    }
+    
+
+    return 0;
+}

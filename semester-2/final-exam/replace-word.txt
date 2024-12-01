@@ -1,0 +1,38 @@
+// https://www.hackerrank.com/contests/final-exam-a-introduction-to-c-for-dsa-a-batch-06/challenges/replace-word/problem
+// Replace Word
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int tst;
+    cin >> tst;
+    
+    while(tst--) {
+        string s, x;
+        cin >> s >> x;
+        
+        int lenS = s.size(), lenX = x.size();
+        
+        for(int i = 0; i < lenS; i++) {
+            if(s[i] == x[0]) {
+                string word;
+                
+                for(int j = i; j < i + lenX; j++) {
+                    word += s[j];
+                }
+                
+                if(word == x) {
+                    s.replace(i, lenX, "#");
+                }
+                
+            }
+          
+        }
+        
+        cout << s << endl;
+    }
+
+    return 0;
+}

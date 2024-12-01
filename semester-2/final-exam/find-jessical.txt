@@ -1,0 +1,27 @@
+// https://www.hackerrank.com/contests/final-exam-a-introduction-to-c-for-dsa-a-batch-06/challenges/find-jessica/problem
+// Find Jessica
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    string s;
+    getline(cin, s);
+    bool flag = false;
+    
+    string word;
+    stringstream ss(s);
+    
+    while(ss >> word) {
+        if(word == "Jessica") {
+            flag = true;
+        }
+    }
+    
+    
+    flag ? cout << "YES" << endl : cout << "NO" << endl;
+    
+
+    return 0;
+}

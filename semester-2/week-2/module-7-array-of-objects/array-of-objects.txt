@@ -3,12 +3,12 @@
 using namespace std;
 
 // Define the Student structure
-struct Student {
-    int id;
-    string name;
-    int marks;
+class Student {
+      public:
+          int id;
+          string name;
+          int marks;
 };
-
 // Function to swap two students
 void swapStudents(Student& a, Student& b) {
     Student temp = a;
