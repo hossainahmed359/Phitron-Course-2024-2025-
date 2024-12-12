@@ -1,0 +1,55 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+    vector<int> v = {1, 2, 3, 4, 5};
+    vector<int> v2 = {100, 200, 300, 400, 500};
+ 
+    v.insert(v.begin() + 2, 222);
+     for (int x : v) {
+        cout << x << endl;
+    }
+    
+    
+    v.insert(v.begin() + 2, v2.begin(), v2.end());
+    
+    for (int x : v) {
+        cout << x << endl;
+    }
+    
+    v.erase(v.begin() + 2);
+    
+    for (int x : v) {
+        cout << x << endl;
+    }
+    
+    
+    v.erase(v.begin() + 2, v.end() - 1);
+    
+    for (int x : v) {
+        cout << x << endl;
+    }
+    
+    replace(v.begin(), v.end() - 2, 2, 1000);
+    vector<int>:: iterator it = find(v.begin(), v.end(), 100);
+    auto it = find(v.begin(), v.end(), 100);\
+    
+    if(it == v.end()) {
+      // value not found
+    } else {
+      // value found
+    }
+    
+     for (int x : v) {
+        cout << x << endl;
+    }
+    
+    // cout << pb << endl;
+
+    
+    
+
+    
+    return 0;
+}
