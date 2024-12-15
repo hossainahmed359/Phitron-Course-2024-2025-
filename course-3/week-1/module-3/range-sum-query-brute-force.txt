@@ -2,6 +2,8 @@
 //https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/Y 
 // Y. Range sum query
 
+// Prefix Sum
+
 #include <bits/stdc++.h>
 using namespace std;
 

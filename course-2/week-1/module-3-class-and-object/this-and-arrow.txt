@@ -26,6 +26,12 @@ int main()
     
     cout << john.roll << " " << john.cls << " " << john.gpa << endl;
 
+    Student obj(1, 10, 3.5); // Stack allocation
+    Student* obj = new Student(1, 10, 3.5); // Heap allocation
+
+
+
     
     return 0;
 }
+
