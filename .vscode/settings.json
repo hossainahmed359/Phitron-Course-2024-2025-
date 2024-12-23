@@ -1,14 +1,94 @@
 {
-    "editor.fontSize": 11,
-    "C_Cpp.default.cppStandard": "c++20",
-    "C_Cpp.default.cStandard": "c11",
-    "terminal.integrated.defaultProfile.windows": "Git Bash",
-    "code-runner.runInTerminal": true,
-    "code-runner.saveAllFilesBeforeRun": true,
-    "code-runner.terminalRoot": "/",
-    "code-runner.executorMapByGlob": {
-        "pom.xml": "cd $dir && mvn clean package"
+    // editor
+    "editor.fontSize": 12,
+    "editor.fontFamily": "Fira Code, Operator Mono",
+    "editor.fontLigatures": true,
+    "editor.wordWrap": "off",
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "comment",
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            }
+        ]
     },
+    // cursor
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorBlinking": "expand",
+    // config related to code formatting
+    "[javascript]": {
+        "editor.formatOnSave": false,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+        "editor.formatOnSave": false,
+        "editor.defaultFormatter": null
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit",
+        "source.fixAll.tslint": "explicit",
+        "source.organizeImports": "explicit"
+    },
+    // terminal
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontWeight": "normal",
+    "terminal.integrated.fontFamily": "Fira Code, Operator Mono",
+    // terminal customization
+    "workbench.colorCustomizations": {
+        "terminal.background": "#1D2021",
+        "terminal.foreground": "#A89984",
+        "terminalCursor.background": "#A89984",
+        "terminalCursor.foreground": "#A89984",
+        "terminal.ansiBlack": "#1D2021",
+        "terminal.ansiBlue": "#0D6678",
+        "terminal.ansiBrightBlack": "#665C54",
+        "terminal.ansiBrightBlue": "#0D6678",
+        "terminal.ansiBrightCyan": "#8BA59B",
+        "terminal.ansiBrightGreen": "#95C085",
+        "terminal.ansiBrightMagenta": "#8F4673",
+        "terminal.ansiBrightRed": "#FB543F",
+        "terminal.ansiBrightWhite": "#FDF4C1",
+        "terminal.ansiBrightYellow": "#FAC03B",
+        "terminal.ansiCyan": "#8BA59B",
+        "terminal.ansiGreen": "#95C085",
+        "terminal.ansiMagenta": "#8F4673",
+        "terminal.ansiRed": "#FB543F",
+        "terminal.ansiWhite": "#A89984",
+        "terminal.ansiYellow": "#FAC03B"
+    },
+    "workbench.colorTheme": "One Monokai",
+    "editor.minimap.showSlider": "always",
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "editor.stickyScroll.enabled": false,
+    "editor.minimap.enabled": false,
+    "remote.SSH.remotePlatform": {
+        "*.gitpod.io": "linux"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[liquid]": {
+        // "editor.defaultFormatter": "vscode.html-language-features",
+        "editor.defaultFormatter": "vscode.html-language-features",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 4
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "liquid.format.rules": {
+        "indentSize": 4,
+        "wrap": 24,
+        "json": {
+            "braceAllman": true
+        }
+    },
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "editor.detectIndentation": false,
+    "breadcrumbs.enabled": false,
+    "editor.renderWhitespace": "all",
+    "prettier.tabWidth": 4,
     "code-runner.executorMap": {
         "javascript": "node",
         "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
@@ -69,7 +149,7 @@
         //WITH TEXT FILE
 
         "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt.exe && timeout 15s $dir$fileNameWithoutExt.exe < input.txt > output.txt || (echo -n > output.txt && echo 'Time Limit Gone')",
-        "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt.exe && timeout 15s $dir$fileNameWithoutExt.exe < input.txt > output.txt || (echo -n > output.txt && echo 'Time Limit Gone')",
+        "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt.exe && timeout 15s $dir$fileNameWithoutExt.exe < input.txt > output.txt || (echo -n > output.txt && echo 'Time Limit Gone')"
     },
 
     "window.zoomLevel": 1,

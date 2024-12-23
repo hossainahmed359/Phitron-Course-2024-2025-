@@ -88,6 +88,42 @@ void delete_at_index(Node *&head, Node *&tail, long int index)
     delete deleteNode;
 }
 
+void delete_at_head(Node *&head, long int index)
+{
+    Node *deleteNode = head;
+    head = deleteNode->next;
+    delete deleteNode;
+}
+
+void delete_at_index_alt(Node *&head, long int index)
+{
+
+    Node *tmp = head;
+    for (int i = 0; i < index - 1; i++)
+    {
+        tmp = tmp->next;
+    }
+
+    Node *deleteNode = tmp->next;
+    tmp->next = deleteNode->next;
+    delete deleteNode;
+}
+
+void delete_at_tail(Node *&head, Node *&tail, long int index /* Always last index */)
+{
+
+    Node *tmp = head;
+    for (int i = 0; i < index - 1; i++)
+    {
+        tmp = tmp->next;
+    }
+
+    Node *deleteNode = tmp->next;
+    tmp->next = deleteNode->next;
+    delete deleteNode;
+    tail = tmp;
+}
+
 void print_linked_list(Node *head)
 {
     Node *tmp = head;
@@ -133,10 +169,24 @@ int main()
         }
         else if (x == 2)
         {
+            // int len = get_linked_list_len(head);
+            // if (v < len)
+            // {
+            //     delete_at_index(head, tail, v);
+            // }
+
             int len = get_linked_list_len(head);
-            if (v  < len)
+            if (v == 0)
             {
-                delete_at_index(head, tail, v);
+                delete_at_head(head, v);
+            }
+            else if (v < len - 1)
+            {
+                delete_at_index_alt(head, v);
+            }
+            else if (v == len - 1)
+            {
+                delete_at_tail(head, tail, v);
             }
         }
 

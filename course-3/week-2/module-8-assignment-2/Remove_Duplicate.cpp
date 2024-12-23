@@ -65,6 +65,42 @@ void remove_duplicates(Node *&head, Node *&tail)
     }
 }
 
+void remove_duplicates_alt(Node *&head, Node *&tail)
+{
+    for (Node *i = head; i->next != NULL; i = i->next)
+    {
+
+        int targetVal = i->val;
+
+        Node *prev = i;
+
+        while (prev->next != NULL)
+        {
+
+            Node *current = prev->next;
+
+            if (targetVal == current->val)
+            {
+                Node *deletenode = current;
+
+                if (current->next == NULL)
+                {
+                    prev->next = NULL;
+                    tail = prev;
+                }
+                else
+                {
+                    prev->next = current->next;
+                }
+
+                delete deletenode;
+            } 
+
+            prev = prev->next;
+        }
+    }
+}
+
 void print_linked_list(Node *head)
 {
     Node *tmp = head;
@@ -94,6 +130,7 @@ int main()
     }
 
     remove_duplicates(head, tail);
+    // remove_duplicates_alt(head, tail);
 
     print_linked_list(head);
     cout << endl;
