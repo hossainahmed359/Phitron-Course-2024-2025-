@@ -8,6 +8,10 @@
         "*.scss.liquid": "liquid-scss",
         "iostream": "cpp",
         "ostream": "cpp",
-        "new": "cpp"
+        "new": "cpp",
+        "string": "cpp",
+        "sstream": "cpp",
+        "regex": "cpp",
+        "iosfwd": "cpp"
     }
 }
