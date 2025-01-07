@@ -1,0 +1,1 @@
+{"name":"Local: queue","url":"f:\\Repos-Home\\PHITRON\\course-3\\week-4\\module-14\\queue.cpp","tests":[{"id":1736102340151,"input":"5\n1 2 3 4 5","output":"1\n2\n3\n4\n5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Repos-Home\\PHITRON\\course-3\\week-4\\module-14\\queue.cpp","group":"local","local":true}
