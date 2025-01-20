@@ -24,7 +24,7 @@ int main()
 
     vector<int> arr = {23, 15, 21, 13, 9, 19, 8, 2, 4, 7};
 
-    // delete max value
+    // delete min value
     int len = arr.size();
     arr[0] = arr[len - 1];
     arr.pop_back();
