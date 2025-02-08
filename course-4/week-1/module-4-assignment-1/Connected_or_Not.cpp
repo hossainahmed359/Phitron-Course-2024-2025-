@@ -65,18 +65,39 @@ int main()
 }
 
 /*
-5 6
+========= INPUT =========
+5 6 -> Nodes & Edges
 
-0 1
+0 1 -> Connections
 1 2
 2 3
 3 4
 1 4
 0 2
 
-1  1  1  0  0
-0  1  1  0  1
-0  0  1  1  0
-0  0  0  1  1
-0  0  0  0  1
+10 -> Queries
+
+0 1 -> Check Connection
+1 0
+2 2
+2 3
+0 3
+3 0
+1 4
+4 1
+4 3
+1 2
+
+========= OUTPUT =========
+YES
+NO
+YES
+YES
+NO
+NO
+YES
+NO
+NO
+YES
+
 */
