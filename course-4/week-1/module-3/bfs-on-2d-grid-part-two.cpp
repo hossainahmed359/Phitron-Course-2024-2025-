@@ -40,11 +40,11 @@ void bfs(int si, int sj) /*  O(N + E)   */
             int ci = par_i + moveD[i].first;
             int cj = par_j + moveD[i].second;
 
-            if (valid(ci, cj) && freq[ci][cj] == false)
+            if (valid(ci, cj) && freq[ci][cj] == false && grid[ci][cj]  == '.' /* checking if path is blocked on not */)
             {
                 que.push({ci, cj});
                 freq[ci][cj] = true;
-                level[ci][cj] =  level[par_i][par_j] + 1;
+                level[ci][cj] = level[par_i][par_j] + 1;
             }
         }
     }
@@ -85,6 +85,17 @@ int main()
 2 0
 
  */
+
+/* INPUT WITH BLOCKED PATH
+
+3 4
+. . . .
+. # . .
+. # . .
+1 2
+2 0
+
+*/
 
 /* OUTPUT
 
