@@ -1,5 +1,5 @@
 // https://www.hackerrank.com/contests/assignment-01-a-introduction-to-algorithms-a-batch-06/challenges/count-apartments
-// Count Apartments || 
+// Count Apartments II
 
 #include <bits/stdc++.h>
 using namespace std;
