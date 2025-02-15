@@ -6,7 +6,7 @@ using namespace std;
 
 int n, m;
 int grid[1005][1005];
-int freq[1005][1005];
+bool freq[1005][1005];
 
 vector<pair<int, int>> move_axis = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 
@@ -48,7 +48,7 @@ int main()
         }
     }
 
-    memset(freq, 0, sizeof(freq));
+    memset(freq, false, sizeof(freq));
 
     int min_area = INT_MAX;
     bool flag = false;

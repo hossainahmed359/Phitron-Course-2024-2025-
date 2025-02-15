@@ -1,12 +1,12 @@
-// https://www.hackerrank.com/contests/mid-term-exam-a-introduction-to-algorithms-a-batch-06/challenges/same-component
-// Same Component
+// https://www.hackerrank.com/contests/mid-term-exam-a-introduction-to-algorithms-a-batch-06/challenges/knight-moves-2
+// Knight Moves
 
 #include <bits/stdc++.h>
 using namespace std;
 
 int n, m;
-int grid[1005][1005];
-bool freq[1005][1005];
+int grid[105][105];
+bool freq[105][105];
 
 vector<pair<int, int>> move_axis = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 
@@ -17,9 +17,12 @@ bool valid_axis(int i, int j)
     return true;
 }
 
+int steps = 0;
+
 void DFS(int si, int sj)
 {
     freq[si][sj] = true;
+    steps++;
 
     for (int i = 0; i < 4; i++)
     {
@@ -46,44 +49,47 @@ int main()
     }
 
     memset(freq, false, sizeof(freq));
+    memset(freq, 0, sizeof(freq));
 
-    int si, sj, di, dj;
-    cin >> si >> sj >> di >> dj;
-    DFS(si, sj);
+    int min_steps = INT_MAX;
+    bool flag = false;
 
-    if (freq[di][dj])
-        cout << "YES\n";
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            if (!freq[i][j])
+            {
+                //
+            }
+        }
+    }
+
+    if (!flag)
+        cout << -1 << endl;
     else
-        cout << "NO\n";
+        cout << min_steps << endl;
 
     return 0;
 }
 
-/*
 
-5 4
-..-.
----.
-..-.
---..
-....
-0 1
-3 2
+/* 
+6 5
+..-..
+..-..
+-----
+.-...
+.----
+.....
 
+-> Output -> 3
 
--> Output -> NO
+3 3
+---
+---
+---
 
-
-5 4
-....
----.
-..-.
---..
-....
-0 1
-3 2
-
--> Output -> YES
-
+-> Output -> -1
 
 */
