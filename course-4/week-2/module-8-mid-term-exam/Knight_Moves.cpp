@@ -6,8 +6,8 @@ using namespace std;
 int n, m;
 int ki, kj, qi, qj; /* k -> source, q -> destination */
 
-// int grid[105][105];
-bool freq[105][105];
+// int grid[1005][1005];
+bool freq[1005][1005];
 pair<int, int> parent[1005][1005];
 vector<pair<int, int>> move_axis = {{-2, -1}, {-2, 1}, {2, -1}, {2, 1}, {-1, -2}, {-1, 2}, {1, -2}, {1, 2}};
 
