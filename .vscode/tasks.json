@@ -2,52 +2,26 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Compile and run",
+            "label": "Build and Run C++",
             "type": "shell",
-            "command": "",
+            "command": "g++",
             "args": [
-                "g++",
-                "-g",
-                "${relativeFile}",
                 "-o",
-                "${fileBasenameNoExtension}.out",
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "${file}",
                 "&&",
-                "clear",
-                "&&",
-                "timeout",
-                "10",
-                "/usr/bin/time",
-                "-v",
-                "--output",
-                "sys.txt",
-                "./${fileBasenameNoExtension}.out",
+                "${fileDirname}/${fileBasenameNoExtension}",
                 "<",
-                "input.txt",
+                "${fileDirname}/input.txt",
                 ">",
-                "output.txt",
-                "&&",
-                "rm",
-                "*out"
+                "${fileDirname}/output.txt"
             ],
-            "presentation": {
-                "reveal": "silent"
-            },
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
-            "problemMatcher": {
-                "owner": "cpp",
-                "fileLocation": ["relative", "${workspaceRoot}"],
-                "pattern": {
-                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
-                    "file": 1,
-                    "line": 2,
-                    "column": 3,
-                    "severity": 4,
-                    "message": 5
-                }
-            }
+            "problemMatcher": ["$gcc"],
+            "detail": "Compile and run C++ program with input.txt and output.txt"
         }
     ]
 }
