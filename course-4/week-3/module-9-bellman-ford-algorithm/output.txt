@@ -1,1 +1,4 @@
-printing the value of n: 222
+0 -> 0
+1 -> 7
+2 -> 5
+3 -> 10
