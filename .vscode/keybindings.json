@@ -1,0 +1,8 @@
+[
+    {
+        "key": "ctrl+shift+b", // Use "cmd+shift+b" for macOS
+        "command": "workbench.action.tasks.runTask",
+        "args": "Build and Run C++", // Must match the label in tasks.json
+        "when": "editorTextFocus"
+    }
+]
