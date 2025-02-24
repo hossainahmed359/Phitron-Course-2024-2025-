@@ -26,19 +26,20 @@ void FLOYD_WARSHALL() /* v^3  || n^3 */
 
 void detectNegativeCycle()
 {
+    bool flag = false;
     for (int i = 0; i < n; i++)
     {
-        for (int j = 0; j < n; j++)
+        if (adj_mat[i][i] < 0) /* the value of moving i -> i is 0 */
         {
-            if (i == j && adj_mat[i][j] < 0  /* the value of moving i -> i is 0 */)
-            {
-                cout << "Negative Cycle Found!" << endl;
-                return;
-            }
+            flag = true;
+            break;
         }
     }
 
-    cout << "No Negative Cycle Found!" << endl;
+    if (flag)
+        cout << "Negative Cycle Found!" << endl;
+    else
+        cout << "No Negative Cycle Found!" << endl;
 }
 
 int main()
