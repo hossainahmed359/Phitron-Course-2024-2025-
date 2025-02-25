@@ -96,6 +96,12 @@ Input:
 2 3 4
 
 Output:
+0  3  5  8  
+I  0  2  5  
+I  I  0  4  
+I  I  I  0  
+No Negative Cycle Found!
+
 
 Input:
 4 4
@@ -106,6 +112,11 @@ Input:
 
 
 Output:
+0  4  7  9  
+I  -1  2  4  
+I  -4  -1  1  
+I  -7  -4  -2  
+Negative Cycle Found!
 
 
 */
