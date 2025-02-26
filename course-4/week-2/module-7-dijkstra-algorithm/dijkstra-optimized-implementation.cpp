@@ -10,8 +10,8 @@ void dijkstra(int src)
     priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
 
     /*
-        priority_queue default comprarison works with the first value by default
-        pq.first = distace
+        priority_queue default comparison works with the first value by default
+        pq.first = distance
         pq.second = node val
 
     */
