@@ -130,8 +130,9 @@
     "thread": "cpp",
     "typeindex": "cpp",
     "typeinfo": "cpp",
-    "valarray": "cpp"
-  },
+    "valarray": "cpp",
+    "climits": "cpp"
+},
   "cSpell.words": [
     "WARSHALL"
   ]
