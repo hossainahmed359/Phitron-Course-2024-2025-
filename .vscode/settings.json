@@ -132,7 +132,7 @@
     "typeinfo": "cpp",
     "valarray": "cpp",
     "climits": "cpp"
-},
+  },
   "cSpell.words": [
     "WARSHALL"
   ]
