@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "f:/Repos-Home/PHITRON/course-4/week-4/module-13-practice-problem",
-      "program": "f:/Repos-Home/PHITRON/course-4/week-4/module-13-practice-problem/build/Debug/outDebug",
+      "cwd": "f:/Repos-Home/PHITRON/course-4/week-4/module-14-dynamic-programming",
+      "program": "f:/Repos-Home/PHITRON/course-4/week-4/module-14-dynamic-programming/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
