@@ -131,8 +131,9 @@
     "typeindex": "cpp",
     "typeinfo": "cpp",
     "valarray": "cpp",
-    "climits": "cpp"
-  },
+    "climits": "cpp",
+    "codeforces-knapsack": "cpp"
+},
   "cSpell.words": [
     "WARSHALL"
   ]

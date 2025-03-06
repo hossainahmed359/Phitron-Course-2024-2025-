@@ -1,3 +1,6 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/U
+// Knapsack
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -33,18 +36,11 @@ int knapsack(int i, int max_weight)
 
 int main()
 {
-    cin >> n;
+    cin >> n >> max_weight;
     for (int i = 0; i < n; i++)
     {
-        cin >> val[i];
+        cin >> weight[i] >> val[i] ;
     }
-
-    for (int i = 0; i < n; i++)
-    {
-        cin >> weight[i];
-    }
-
-    cin >> max_weight;
 
     for (int i = 0; i <= n; i++)
     {
@@ -62,9 +58,9 @@ int main()
 /*
 
 Input:
-4
-10 4 7 5
-4 3 2 5
-8
+3 8
+3 30
+4 50
+5 60
 
 */
