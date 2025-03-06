@@ -133,8 +133,9 @@
     "valarray": "cpp",
     "climits": "cpp",
     "codeforces-knapsack": "cpp"
-},
+  },
   "cSpell.words": [
+    "tetranacci",
     "WARSHALL"
-  ]
+]
 }
