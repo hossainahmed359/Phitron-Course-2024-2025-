@@ -4,20 +4,20 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<bool> freq(100005, false);
-
-void make_it(int i, int n)
+void make_it(int i, int n, vector<bool> &freq)
 {
-    cout << "i : " << i << ", n: " << n << endl;
+    // cout << "i : " << i << ", n: " << n << endl;
 
-    if (i > n || freq[n])
+    if (i >= n || freq[n] || freq[i])
     {
+        freq[i] = true;
         return;
     }
+
     freq[i] = true;
 
-    make_it(i + 3, n);
-    make_it(i * 2, n);
+    make_it(i + 3, n, freq);
+    make_it(i * 2, n, freq);
 }
 
 int main()
@@ -30,8 +30,9 @@ int main()
     {
         int n;
         cin >> n;
+        vector<bool> freq(1000000, false);
 
-        make_it(1, n);
+        make_it(1, n, freq);
 
         if (freq[n])
             cout << "YES\n";
@@ -41,3 +42,18 @@ int main()
 
     return 0;
 }
+
+/*
+
+Level 0:                     1
+Level 1:                 /       \
+Level 2:                4         2
+Level 3:             /   \       /   \
+Level 4:           7      8     5      4
+Level 5:         / \    / \    / \    / \
+Level 6:       10  14 11 16   8  10  7   8
+
+
+
+
+*/
