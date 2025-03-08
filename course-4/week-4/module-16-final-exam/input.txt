@@ -1,5 +1,5 @@
-1
-4 7
-2 3 4 5
-4 7 6 5
-
+4
+eat tea
+madam madam
+ball all
+ant tan

@@ -4,16 +4,16 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int knapsack(int i, int mx_weight, vector<pair<int, int>> vec, vector<vector<int>> &dp)
+int knapsack(int i, int mx_weight, vector<pair<int, int>> &vec, vector<vector<int>> &dp)
 {
     if (i < 0)
         return 0;
 
-    int val = vec[i].first;
-    int weight = vec[i].second;
-
     if (dp[i][mx_weight] != -1)
         return dp[i][mx_weight];
+        
+    int val = vec[i].first;
+    int weight = vec[i].second;
 
     if (mx_weight - weight < 0)
     {
@@ -29,6 +29,7 @@ int knapsack(int i, int mx_weight, vector<pair<int, int>> vec, vector<vector<int
 
 int main()
 {
+
     int t;
     cin >> t;
     while (t--)
@@ -43,7 +44,7 @@ int main()
         for (int i = 0; i < n; i++)
             cin >> knapsack_arr[i].first;
 
-        vector<vector<int>> dp(n + 1, vector<int>(mx_weight + 1, -1));
+        vector<vector<int>> dp(n, vector<int>(mx_weight + 1, -1));
 
         int max_val = knapsack(n - 1, mx_weight, knapsack_arr, dp);
         cout << max_val << endl;
