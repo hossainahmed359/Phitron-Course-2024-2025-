@@ -1,0 +1,134 @@
+Here is some difference between list and dictionary in python
+
+LIST:
+    Ordering: 
+        Every element is ordered by the sequence they were inserted. 
+        Example:
+            input: 
+
+            lst = []
+            lst.append(1) 
+            lst.append(2) 
+            lst.append(3) 
+            lst.append(4) 
+            
+            print(lst)
+
+            output: [1, 2, 3, 4]
+         
+    Accessibility: 
+        In lists elements can be accessed by the index number. 
+        Example: 
+            lst = [1, 2, 3, 4]
+            lst[0] -> 1
+            lst[1] -> 2
+
+    Initialization: 
+        A list can be initialized with [] , square brackets
+        Example: 
+            lst = []
+
+    Mutation: 
+        A list can be mutated (insertion, update, delete) by built in methods. 
+        Commonly used methods: 
+            1. append() 
+            2. clear(), 
+            3. copy(), 
+            4. count(), 
+            5. extend(), 
+            6. index(), 
+            7. insert(), 
+            8. pop(), 
+            9. remove(), 
+            10. reverse(), 
+            11. sort()
+
+    Iteration: 
+        lst = [1, 2, 3, 4]
+        1. 
+            for x in lst:
+                print(x)
+        2.   
+            l = len(lst)
+            for i in range(l):
+                print(lst[i])
+        3.
+            i = 0;
+            while i < len(lst):
+                print(lst[i])
+                i++
+
+DICTIONARY:
+    Ordering: 
+        In dictionary elements are not ordered as they don't have specific index like lists, instead they this data structure have key, value pair.
+        An element can be accessed by keys, which will return their corresponding value
+        Example:
+            input: 
+
+            dict = {'name' : 'foo', 'property' : 'bar'}
+            print(dict['name'])
+
+            output: foo
+         
+    Accessibility: 
+        In dictionary the value of elements can be accessed by their key.
+        Example: 
+            dict = {'name' : 'foo', 'property' : 'bar'}
+            dict['name'] -> foo
+            dict['property'] -> bar
+
+    Initialization: 
+        A dictionary can be initialized with {} , curly brackets
+        Example: 
+            dict = {}
+
+    Mutation: 
+
+        A dictionary can be mutated by built in methods. 
+        
+        Commonly used methods: 
+            1. clear() 
+            2. copy(), 
+            3. fromkeys(), 
+            4. get(), 
+            5. items(), 
+            6. keys(), 
+            7. pop(), 
+            8. popitem(), 
+            9. setdefault(), 
+            10. update(), 
+            11. values()
+
+    Iteration: 
+        dict = {'name' : 'foo', 'property' : 'bar'}
+
+        1. returns all the keys in the dictionary
+            for x in dict:
+                print(x)
+
+            output: name, property
+
+        2. returns all the keys in dictionary
+            for x in dict.keys():
+                print(x)
+
+            output: name, property
+
+        3. returns all the value in dictionary
+            for x in dict.value():
+                print(x)
+
+            output: foo, bar
+
+        4. returns all the keys and values in dictionary
+            for key, value in dict.items():
+                print(key, value)
+
+            output: name, foo,, property, bar
+
+
+
+
+
+
+    
