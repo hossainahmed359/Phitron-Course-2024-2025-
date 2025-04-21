@@ -1,3 +1,5 @@
+# is a relation
+
 class Gadget:
     def __init__(self, name, price, company) -> None:
         self.name = name
