@@ -99,7 +99,6 @@ def init():
         if student_found is False:
             raise Exception("Invalid student ID when enrolling a student.")
 
-
     def drop_student ():
         entered_student_id = input("Enter valid student ID to drop: ").strip()
 
@@ -121,7 +120,6 @@ def init():
             raise Exception("Invalid student ID when dropping a student.")
 
     def display_menu_options(): 
-        
         print('Command Options:')
         print('1 : View All Students')
         print('2 : Enroll Student')
@@ -131,7 +129,6 @@ def init():
     def menu_system() :
         while True:
             try:
-
                 value = int(input("\nEnter command (1-4): "))
             
                 if(value == 1) :
@@ -152,13 +149,7 @@ def init():
                 print(f"Error: {e}")
                 print("Returning to main menu...")
 
-
-
-    
-
-
     display_menu_options()
     menu_system()
-
 
 init()
