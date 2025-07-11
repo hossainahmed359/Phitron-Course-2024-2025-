@@ -1,0 +1,17 @@
+1. CREATE TABLE Constraints
+2. SELECT QUERY
+3. WHERE QUERY
+4. Arithmetic Operators
+5. Comparison Operators
+6. Logical AND, OR Operators
+7. DISTINCT, ORDER BY, LIMIT, OFFSET
+8. IN, NOT IN, LIKE, AS
+
+
+Constraints - 
+    PRIMARY KEY
+    FOREIGN KEY
+    UNIQUE
+    CHECK
+    DEFAULT
+    NOT NULL
