@@ -25,3 +25,5 @@ USE mynewdatabase;
 
 -- AS -> Alias
 -- SELECT Name As StudentName WHERE -> Output -> Name column will appear as StudentName
+
+-- SELECT first_name AS "FIRST NAME" FROM employees WHERE last_name  LIKE "Green%" ORDER BY employee_id DESC LIMIT 1, 5;
