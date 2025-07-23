@@ -46,3 +46,8 @@ FROM employees
 SELECT CONCAT(employees.first_name, ' ', employees.last_name) AS 'full name', departments.department_name  
 FROM employees 
     CROSS JOIN departments ON employees.department_id = departments.department_id;
+
+-- Self Join
+SELECT * FROM employees AS e1
+    JOIN employees AS e2 
+    ON e1.department_id = e2.department_id;
