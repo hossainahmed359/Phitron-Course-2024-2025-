@@ -29,9 +29,7 @@ FROM
     employees AS e
     LEFT JOIN employees AS m ON e.manager_id = m.employee_id;
 
--- QUESTION 2 : Write a query to show the departments
-WHERE
-    there is not employee IN that department
+-- QUESTION 2 : Write a query to show the departments where there is no employee
 SELECT
     d.department_id,
     d.department_name,
@@ -42,10 +40,8 @@ FROM
 WHERE
     e.employee_id IS NULL;
 
--- QUESTION 3 : Write a query to show the first name, salary, the value of how much less salary he/she gets
-FROM
-    the average salary IN his department
-    --1 
+-- QUESTION 3 : Write a query to show the first name, salary, the value of how much less salary he/she gets from the average salary in his department
+--1 
 SELECT
     e.employee_id,
     e.first_name,
