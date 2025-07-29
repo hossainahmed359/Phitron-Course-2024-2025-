@@ -1,0 +1,2 @@
+-- Database design strategies (Top down, Bottom up)
+-- ERD = Entity Relationship Diagram
