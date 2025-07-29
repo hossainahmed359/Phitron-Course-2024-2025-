@@ -10,6 +10,13 @@
         cmd -> pip list
         cmd -> pip freeze > requirements.txt
 
+    Practice list
+        Query Practice - Leetcode
+        ERD Practice
+        Database Procedure, Function, Trigger
+        Website with MySQL
+        Practice schema / create databases
+
 """
 
 import mysql.connector
